@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>AQUALAB</title>
+</head>
+<body>
+  <div class="contenedor">
+    <h1 class="contenedor__titulo">AquaLab</h1>
+    <h2 class="contenedor__subtitulo">Iniciar Sesión</h2>
+    
+    <form id="loginForm" class="formulario">
+      <input type="text" name="usuario" class="formulario__input" placeholder="Usuario" required>
+      <input type="password" name="contrasena" class="formulario__input" placeholder="Contraseña" required>
+      <button type="submit" class="formulario__boton">Ingresar</button>
+      <a href="#" class="formulario__enlace">¿Olvidaste tu contraseña?</a>
+    </form>
+    
+  </div>
+  <script>
+   document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Evita que se recargue la página
+  // Aquí podrías agregar validación si quieres
+  window.location.href = 'dashboard.html'; // Redirige
+});
+
+  </script>
+</body>
+</html>
