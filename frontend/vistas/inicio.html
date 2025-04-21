@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/dashboard.css">
+    <title>inicio</title>
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Home</h1>
+  </header>
+    <section class="home">
+        <div class="home__actions">
+          <button data-vista="crear-cliente.html" class="home__button ">+ Crear cliente</button>
+          <button data-vista="nueva-cotizacion.html" class="home__button ">Nueva cotización</button>
+          <button data-vista="nueva-orden.html" class="home__button ">Nueva orden</button>
+        </div>
+        
+        <div class="home__cards">
+          <div class="card">
+            <div class="card__icon">
+              📝
+            </div>
+            <div class="card__content">
+              <p class="card__title">Cotizaciones pendientes</p>
+              <p class="card__number">4</p>
+              <p class="card__subtitle">sin respuesta</p>
+            </div>
+          </div>
+      
+          <div class="card">
+            <div class="card__icon">
+              📋
+            </div>
+            <div class="card__content">
+              <p class="card__title">Órdenes Activas</p>
+              <p class="card__number">4</p>
+              <p class="card__subtitle">en ejecución</p>
+            </div>
+          </div>
+      
+          <div class="card">
+            <div class="card__icon">
+              👥
+            </div>
+            <div class="card__content">
+              <p class="card__title">Clientes inactivos</p>
+              <p class="card__number">4</p>
+              <p class="card__subtitle">sin respuesta</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const main = document.getElementById('contenido-principal');
+
+  function cargarVista(vista) {
+    fetch(`vistas/${vista}`)
+      .then(res => res.text())
+      .then(html => {
+        main.innerHTML = html;
+      })
+      .catch(err => {
+        main.innerHTML = '<p>Error al cargar la vista.</p>';
+        console.error(err);
+      });
+  }
+
+  // Cargar una vista por defecto (inicio, por ejemplo)
+  cargarVista('inicio.html');
+
+  // Escuchar los clics del menú lateral
+  document.querySelectorAll('aside a[data-vista]').forEach(enlace => {
+    enlace.addEventListener('click', (e) => {
+      e.preventDefault();
+      const vista = e.target.getAttribute('data-vista');
+      cargarVista(vista);
+    });
+  });
+});
+      </script>
+</body>
+</html>

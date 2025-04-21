@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crear-cliente</title>
+</head>
+<body>
+  <section class="form">
+    <h2 class="form__title">Crear cliente</h2>
+  
+    <form class="form__container" id="form-crear-cliente">
+      <div class="form__group">
+        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Nombre completo" />
+        <input type="text" id="identificacion" name="identificacion" class="form__input" placeholder="Identificación" />
+      </div>
+  
+      <div class="form__group">
+        <input type="text" id="direccion" name="direccion" class="form__input" placeholder="Dirección" />
+        <input type="email" id="email" name="email" class="form__input" placeholder="Email" />
+      </div>
+  
+      <div class="form__group">
+        <input type="tel" id="telefono" name="telefono" class="form__input" placeholder="Teléfono" />
+        <select name="ciudad" id="ciudad" class="form__input" required>
+          <option value="">-- Selecciona una ciudad --</option>
+          <option value="Abejorral">Abejorral</option>
+          <option value="Abriaquí">Abriaquí</option>
+          <option value="Alejandría">Alejandría</option>
+          <option value="Amagá">Amagá</option>
+          <option value="Amalfi">Amalfi</option>
+          <option value="Andes">Andes</option>
+          <option value="Angelópolis">Angelópolis</option>
+          <option value="Angostura">Angostura</option>
+          <option value="Anorí">Anorí</option>
+          <option value="Anzá">Anzá</option>
+          <option value="Apartadó">Apartadó</option>
+          <option value="Arboletes">Arboletes</option>
+          <option value="Argelia">Argelia</option>
+          <option value="Armenia">Armenia</option>
+          <option value="Barbosa">Barbosa</option>
+          <option value="Bello">Bello</option>
+          <option value="Belmira">Belmira</option>
+          <option value="Betania">Betania</option>
+          <option value="Betulia">Betulia</option>
+          <option value="Briceño">Briceño</option>
+          <option value="Buriticá">Buriticá</option>
+          <option value="Cáceres">Cáceres</option>
+          <option value="Caicedo">Caicedo</option>
+          <option value="Caldas">Caldas</option>
+          <option value="Campamento">Campamento</option>
+          <option value="Cañasgordas">Cañasgordas</option>
+          <option value="Caracolí">Caracolí</option>
+          <option value="Caramanta">Caramanta</option>
+          <option value="Carepa">Carepa</option>
+          <option value="Carolina del Príncipe">Carolina del Príncipe</option>
+          <option value="Caucasia">Caucasia</option>
+          <option value="Chigorodó">Chigorodó</option>
+          <option value="Cisneros">Cisneros</option>
+          <option value="Cocorná">Cocorná</option>
+          <option value="Concepción">Concepción</option>
+          <option value="Concordia">Concordia</option>
+          <option value="Copacabana">Copacabana</option>
+          <option value="Dabeiba">Dabeiba</option>
+          <option value="Donmatías">Donmatías</option>
+          <option value="Ebéjico">Ebéjico</option>
+          <option value="El Bagre">El Bagre</option>
+          <option value="El Carmen de Viboral">El Carmen de Viboral</option>
+          <option value="El Peñol">El Peñol</option>
+          <option value="El Retiro">El Retiro</option>
+          <option value="El Santuario">El Santuario</option>
+          <option value="Entrerríos">Entrerríos</option>
+          <option value="Envigado">Envigado</option>
+          <option value="Fredonia">Fredonia</option>
+          <option value="Frontino">Frontino</option>
+          <option value="Giraldo">Giraldo</option>
+          <option value="Girardota">Girardota</option>
+          <option value="Gómez Plata">Gómez Plata</option>
+          <option value="Granada">Granada</option>
+          <option value="Guadalupe">Guadalupe</option>
+          <option value="Guarne">Guarne</option>
+          <option value="Guatapé">Guatapé</option>
+          <option value="Heliconia">Heliconia</option>
+          <option value="Hispania">Hispania</option>
+          <option value="Itagüí">Itagüí</option>
+          <option value="Ituango">Ituango</option>
+          <option value="Jardín">Jardín</option>
+          <option value="Jericó">Jericó</option>
+          <option value="La Ceja">La Ceja</option>
+          <option value="La Estrella">La Estrella</option>
+          <option value="La Pintada">La Pintada</option>
+          <option value="La Unión">La Unión</option>
+          <option value="Liborina">Liborina</option>
+          <option value="Maceo">Maceo</option>
+          <option value="Marinilla">Marinilla</option>
+          <option value="Medellín">Medellín</option>
+          <option value="Montebello">Montebello</option>
+          <option value="Murindó">Murindó</option>
+          <option value="Mutatá">Mutatá</option>
+          <option value="Nariño">Nariño</option>
+          <option value="Necoclí">Necoclí</option>
+          <option value="Nechí">Nechí</option>
+          <option value="Olaya">Olaya</option>
+          <option value="Peque">Peque</option>
+          <option value="Pueblorrico">Pueblorrico</option>
+          <option value="Puerto Berrío">Puerto Berrío</option>
+          <option value="Puerto Nare">Puerto Nare</option>
+          <option value="Puerto Triunfo">Puerto Triunfo</option>
+          <option value="Remedios">Remedios</option>
+          <option value="Rionegro">Rionegro</option>
+          <option value="Sabanalarga">Sabanalarga</option>
+          <option value="Sabaneta">Sabaneta</option>
+          <option value="Salgar">Salgar</option>
+          <option value="San Andrés de Cuerquia">San Andrés de Cuerquia</option>
+          <option value="San Carlos">San Carlos</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="San Jerónimo">San Jerónimo</option>
+          <option value="San José de la Montaña">San José de la Montaña</option>
+          <option value="San Juan de Urabá">San Juan de Urabá</option>
+          <option value="San Luis">San Luis</option>
+          <option value="San Pedro de los Milagros">San Pedro de los Milagros</option>
+          <option value="San Pedro de Urabá">San Pedro de Urabá</option>
+          <option value="San Rafael">San Rafael</option>
+          <option value="San Roque">San Roque</option>
+          <option value="San Vicente">San Vicente</option>
+          <option value="Santa Bárbara">Santa Bárbara</option>
+          <option value="Santa Fe de Antioquia">Santa Fe de Antioquia</option>
+          <option value="Santa Rosa de Osos">Santa Rosa de Osos</option>
+          <option value="Santo Domingo">Santo Domingo</option>
+          <option value="Segovia">Segovia</option>
+          <option value="Sonsón">Sonsón</option>
+          <option value="Sopetrán">Sopetrán</option>
+          <option value="Támesis">Támesis</option>
+          <option value="Tarazá">Tarazá</option>
+          <option value="Tarso">Tarso</option>
+          <option value="Titiribí">Titiribí</option>
+          <option value="Toledo">Toledo</option>
+          <option value="Turbo">Turbo</option>
+          <option value="Uramita">Uramita</option>
+          <option value="Urrao">Urrao</option>
+          <option value="Valdivia">Valdivia</option>
+          <option value="Valparaíso">Valparaíso</option>
+          <option value="Vegachí">Vegachí</option>
+          <option value="Venecia">Venecia</option>
+          <option value="Vigía del Fuerte">Vigía del Fuerte</option>
+          <option value="Yalí">Yalí</option>
+          <option value="Yarumal">Yarumal</option>
+          <option value="Yolombó">Yolombó</option>
+          <option value="Yondó">Yondó</option>
+          <option value="Zaragoza">Zaragoza</option>
+        </select>
+      </div>
+  
+     
+  
+      <div class="form__actions">
+        <button type="submit" class="form__button">Guardar</button>
+      </div>
+    </form>
+  </section>
+  <script>
+    document.getElementById('form-crear-cliente').addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const data = {
+        nombre: document.getElementById('nombre').value,
+        identificacion: document.getElementById('identificacion').value,
+        direccion: document.getElementById('direccion').value,
+        email: document.getElementById('email').value,
+        telefono: document.getElementById('telefono').value,
+        ciudad: document.querySelector('select[name="ciudad"]').value
+      };
+  
+      try {
+        const response = await fetch('http://localhost:3000/api/clientes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+  
+        const result = await response.json();
+        alert(result.mensaje);
+  
+        if (response.ok) {
+          document.getElementById('form-crear-cliente').reset();
+        }
+  
+      } catch (error) {
+        alert('Error al enviar el formulario');
+        console.error(error);
+      }
+    });
+  </script>
+  
+</body>
+</html>
+
+  

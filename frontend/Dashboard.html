@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaLab SPA</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="sidebar__logo">AquaLab</h2>
+      <nav class="sidebar__nav">
+        <ul class="sidebar__menu">
+          <li class="sidebar__item" data-view="inicio">Inicio</li>
+          <li class="sidebar__item" data-view="Cotizaciones">Cotizaciones</li>
+          <li class="sidebar__item" data-view="Ordenes">Ordenes</li>
+          <li class="sidebar__item" data-view="Historial-de-actividades">Historial de actividades</li>
+          <li class="sidebar__item" data-view="Notificaciones">Notificaciones</li>
+          <li class="sidebar__item" data-view="Soporte-tecnico">Soporte Tecnico</li>
+          <li class="sidebar__item" data-view="cerrar-sesion">Cerrar sesión</li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main" id="main-content">
+      <!-- Aquí se carga la vista dinámica -->
+    </main>
+  </div>
+
+  <!-- Scripts -->>
+  <script src="js/app.js"></script>
+</body>
+</html>

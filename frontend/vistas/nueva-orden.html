@@ -1,0 +1,40 @@
+<section class="orden">
+    <h2 class="orden__title">Nueva Orden</h2>
+  
+    <form class="orden__form">
+      <div class="orden__group">
+        <select class="orden__input">
+          <option selected disabled>Cliente</option>
+          <option>Cliente 1</option>
+          <option>Cliente 2</option>
+        </select>
+      </div>
+  
+      <div class="orden__group">
+        <div class="orden__servicios">
+          <label class="orden__label">Servicios</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Análisis Físico Químico</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Muestreo</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Visitas técnicas</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Análisis Microbiológicos</label>
+        </div>
+  
+        <div class="orden__prioridad">
+          <label class="orden__label">Prioridad</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Baja</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Media</label>
+          <label class="orden__checkbox"><input type="checkbox" /> Alta</label>
+        </div>
+      </div>
+  
+      <div class="orden__group">
+        <input type="date" class="orden__input" value="2025-04-03" />
+        <input type="text" class="orden__input" placeholder="Observaciones" />
+      </div>
+  
+      <div class="orden__actions">
+        <button type="submit" class="orden__button">Guardar</button>
+      </div>
+    </form>
+  </section>
+  

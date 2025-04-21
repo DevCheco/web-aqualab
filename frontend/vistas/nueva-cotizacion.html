@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/frontend/dashboard.css">
+  <title>nueva-cotizacion</title>
+</head>
+<body>
+  <section class="cotizacion">
+    <h2 class="cotizacion__title">Nueva Cotización</h2>
+    <form class="cotizacion__form" id="form-cotizacion">
+      <div class="cotizacion__group">
+        <select class="cotizacion__input" id="select-clientes" name="cliente">
+          <option value="">-- Seleccione un cliente --</option>
+        </select>
+        <input type="text" name="total" class="cotizacion__input" placeholder="Total" readonly />
+      </div>
+  
+      <div class="cotizacion__group">
+        <input type="date" name="fecha" class="cotizacion__input" value="2024-04-03" />
+      </div>
+  
+      <div class="orden__group">
+        <label class="cotizacion__label">Servicios</label><br>
+        <div class="cotizacion__servicios">
+          <label class="cotizacion__checkbox">
+            <input type="checkbox" name="servicios" class="servicio" value="700000"> Análisis Físico Químico
+          </label>
+          <label class="cotizacion__checkbox">
+            <input type="checkbox" name="servicios"  class="servicio" value="700000"> Muestreo
+          </label>
+          <label class="cotizacion__checkbox">
+            <input type="checkbox" name="servicios"  class="servicio" value="700000"> Visitas técnicas
+          </label>
+          <label class="cotizacion__checkbox">
+            <input type="checkbox" name="servicios"  class="servicio" value="700000"> Análisis Microbiológicos
+          </label>
+        </div>
+      </div>
+  
+      <div class="cotizacion__actions">
+        <button type="submit" class="cotizacion__button">Guardar</button>
+      </div>
+    </form>
+  </section>
+  <script>
+    document.getElementById('form-cotizacion').addEventListener('submit', async (e) => {
+      e.preventDefault(); // Evita el envío tradicional del formulario
+
+      const cliente = document.getElementById('select-clientes').value;
+      const total = document.querySelector('input[name="total"]').value;
+      const fecha = document.querySelector('input[name="fecha"]').value;
+      const servicios = Array.from(document.querySelectorAll('input[name="servicios"]:checked')).map(checkbox => checkbox.value);
+
+      const response = await fetch('http://localhost:3000/api/cotizacion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cliente,
+          total,
+          fecha,
+          servicios,
+        }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert('Cotización guardada');
+      } else {
+        alert('Error al guardar cotización: ' + result.error);
+      }
+    });
+  </script>
+</body>
+</html>
+  

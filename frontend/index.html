@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>AQUALAB</title>
+</head>
+<body>
+  <div class="contenedor">
+    <h1 class="contenedor__titulo">AquaLab</h1>
+    <h2 class="contenedor__subtitulo">Iniciar Sesión</h2>
+    
+    <form action="/login" method="post" class="formulario">
+      <input type="text" name="usuario" class="formulario__input" placeholder="Usuario">
+      <input type="password" name="contrasena" class="formulario__input" placeholder="Contraseña">
+      <button type="submit" class="formulario__boton">Ingresar</button>
+      <a href="#" class="formulario__enlace">¿Olvidaste tu contraseña?</a>
+      <a href="formulario_registro.html" class="formulario__enlace">¿No tienes cuenta? Registrate</a>
+    </form>
+  </div>
+  <script>
+    // Función para obtener parámetros de la URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+  
+    // Mostrar alertas si hay mensajes
+    window.onload = function() {
+      const successMessage = getQueryParam('success');
+      const errorMessage = getQueryParam('error');
+  
+      if (successMessage) {
+        alert(successMessage);
+      }
+  
+      if (errorMessage) {
+        alert(errorMessage);
+      }
+    };
+  </script>
+</body>
+</html>

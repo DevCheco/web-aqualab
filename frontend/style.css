@@ -1,0 +1,75 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Variables de color */
+  :root {
+    --color-fondo-suave: #f8f4f4;
+    --color-azul: #0583F2;
+    --color-texto-negro: #4e4e4e;
+  }
+  
+  /* Bloque: contenedor */
+  .contenedor {
+    width: 30%;
+    margin: 10rem auto;
+    padding: 2rem 3rem;
+    background-color: var(--color-fondo-suave);
+    border-radius: 8px;
+  }
+  
+  /* Elementos del contenedor */
+  .contenedor__titulo {
+    text-align: center;
+    color: var(--color-azul);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contenedor__subtitulo {
+    text-align: center;
+    color: var(--color-texto-negro);
+    margin-bottom: 2rem;
+  }
+  
+  /* Bloque: formulario */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Elementos del formulario */
+  .formulario__input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+  }
+  
+  .formulario__boton {
+    width: 70%;
+    height: 35px;
+    background-color: var(--color-azul);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .formulario__enlace {
+    color: var(--color-azul);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .formulario__enlace:hover {
+    text-decoration: underline;
+  }
+  
+
+

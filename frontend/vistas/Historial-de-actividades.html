@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historial de Actividades</title>
+  <link rel="stylesheet" href="/frontend/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Historial de Actividades</h1>
+  </header>
+
+  <main class="registro">
+
+    <div class="actividad-grid">
+      <div class="actividad-box">
+        <i class="fas fa-clock icono"></i>
+        cronológica de actividades
+      </div>
+      <div class="actividad-box">
+        <i class="fas fa-circle-check icono green"></i>
+        Icono de tipo de actividad <br> (crear, editar, eliminar)
+      </div>
+      <div class="actividad-box">
+        <i class="fas fa-magnifying-glass icono"></i>
+        Campo de búsqueda
+      </div>
+      <div class="actividad-box">
+        <span class="icono estado-vacio">🕳️</span>
+        Estado vacío: “No hay actividades recientes”
+      </div>
+      <div class="actividad-box">
+        <i class="fas fa-calendar-day icono"></i>
+        Filtro por fecha
+      </div>
+      <div class="actividad-box">
+        <i class="fas fa-check-square icono green"></i>
+        Snackbar de confirmación: <br> “Actividad registrada exitosamente”
+      </div>
+    </div>
+
+    <div class="registro__btn-container">
+      <button class="btn-guardar">Guardar</button>
+    </div>
+  </main>
+</body>
+</html>
